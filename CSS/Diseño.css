@@ -1,41 +1,49 @@
-*{
-    margin: 0;
+body {
+    width: 100vw;
+    height: 100vh;
+
 }
-html{
-    overflow-x: hidden;
-}
-.Inicio{
-    
-        background-color: #385ce4;
-        text-align: center;
-        
-        
-       padding-bottom: 13.5em;
-        width: 100%;
-        margin: 0;
-        right: 40px;
-        float: left;
-        
-    
-}
-.Contener{
-    width: 40%;
-    margin-left: 26em;
+
+
+.Inicio {
+
+    background-color: #385ce4;
+    width: 100%;
+
+
+} 
+
+.Contener {
+    margin-left: 27.5%;
+    width: 45%;
     margin-top: 3em;
     background-color: rgba(232, 225, 204, 0.4);
     padding: 2em;
     border-radius: 3px;
 }
-.focalizar{
+
+.focalizar {
+    margin-top: 1.5%;
     background-color: rgba(232, 225, 204, 0.8);
+    padding: 1%;
     border-radius: 3px;
     width: 60%;
-    margin-top: 2em;
-   
-    margin-left: 18em;
+    margin-left: 20%;
+}
+html{
+    overflow-x: hidden;
+}
+.TituloPregunas{
+    text-align: center;
+    font-size: 40px;
+}
+.logo {
+    height: auto;
+    width: 10vw; 
+    margin-left: 45vw;
 }
 
-  @keyframes slidein {
+@keyframes slidein {
     from {
       margin-left: 100%;
       width: 300%;
@@ -55,27 +63,15 @@ p{
     animation-duration: 3s;
     animation-name: slidein;
 }
-.logo{
-    
-    width: 40px;
-    width:140px;
-    position: absolute;
-    left: 90px;
-}
-.logo2{
-    
-    width: 40px;
-    width:140px;
-    position: absolute;
-    left: 1100px;
-    margin-top: 2px;
-}
 
-.navegador{
+
+.navegador {
     margin-top: 0.5em;
 }
-a{
-    color: #fffcfc   ;
-   margin-right: 2em;
-   text-decoration: none;
+
+
+.chart {
+    width: 50%;
+    margin-left: 25%;
 }
+
