@@ -54,13 +54,13 @@ html{
       width: 100%;
     }
   }
-p{
-    margin-left: 2em;
+.textoInicio{
+    margin-left: 4%;
+    line-height: 200%;
     
-    margin-bottom: 1px; 
 }
 .Animacion{
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-name: slidein;
 }
 
