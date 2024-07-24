@@ -1,0 +1,26 @@
+.Formulario-container {
+    display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1rem;
+}
+.Formulario2-container {
+    display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3,1fr);
+  gap: 0.5rem;
+}
+.contenedor {
+    background-color: rgba(232, 225, 204, 0.8);
+    border: 1px solid #f0f0f0;
+    padding: 3rem;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+li{
+  list-style: none;
+}
