@@ -74,4 +74,12 @@ html{
     width: 50%;
     margin-left: 25%;
 }
-
+.divisionProductos {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 2%;
+    align-content: center;
+}
+.botonFiltro{
+    border-radius: 20px;
+}
