@@ -1,9 +1,15 @@
 $(document).ready(function () {
+    mostrarProductos(productos)
+    
 
-  $("#prueba").html('')
-    productos.forEach((producto)=>{
-  
-        const imagen=` 
+});
+
+
+function mostrarProductos(data){
+    $("#tienda").html('')
+    data.forEach((producto) => {
+
+        const productoAgregar = ` 
         <div class="col">
             <div class="card h-100">
                 <img class="card-img-top" src="${producto.imagenes[0]}" alt="${producto.imagenes[0]}">
@@ -16,8 +22,36 @@ $(document).ready(function () {
                 </div>
             </div>
         </div>`
-            $('#prueba').append(imagen)
+        $('#tienda').append(productoAgregar)
     })
+}
 
-  });
-  
+
+$('#grupoBotones').on('click', 'button', function () {
+    
+    var filtro = $(this).attr('filtro');
+    deseleccionar();
+    $(this).removeClass('btn-secondary');
+    $(this).addClass('btn-primary');
+    console.log(filtro);
+    var productosFiltrados;    
+    if (filtro == 'Todos') {
+        productosFiltrados = productos;
+    } else {
+        productosFiltrados = productos.filter(function(producto) {
+            return producto.categorias.includes(filtro);
+        });
+    }    
+    
+    mostrarProductos(productosFiltrados);
+});
+
+var filtrarBotones = $('#grupoBotones').find('button');
+function deseleccionar() {
+    filtrarBotones.each(function () {
+        
+        $(this).removeClass('btn-primary');
+        $(this).removeClass('btn-secondary');
+        $(this).addClass('btn-secondary');
+    });
+}
