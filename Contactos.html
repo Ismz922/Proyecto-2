@@ -7,7 +7,10 @@
   <link rel="stylesheet" href="./CSS/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="./CSS/Diseño.css">
   <link rel="stylesheet" href="./CSS/Formulario.css">
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJq69BA15-bTgEpAX4YeUuv_RfPK3szHE"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
   <script src="./js/bootstrap.min.js"></script>
   <script src="./js/jquery-3.7.1.js"></script>
   <title>Contactos</title>
@@ -67,9 +70,9 @@
     </div>
   </header>
   <main>
-<br><br><br>
-<h2 style="font-size: 80px; text-align: center;">Contactenos</h2>
-<br><br>
+    <br><br><br>
+    <h2 style="font-size: 80px; text-align: center;">Contactenos</h2>
+    <br><br>
     <div class="Formulario2-container">
       <div class="contenedor">
         <H2>Teléfono:</H2>
@@ -79,91 +82,124 @@
         <h2>Correo electrónico</h2>
         <p>OasisCR@gmail.com</p>
       </div>
-<div class="contenedor">
-  <h2>Nuestros horarios</h2>
-<Ul>
-  <li>Lunes a Viernes de 8 am a 6 pm</li>
-  <li>Sábados y Domingos de 8 am a 8 pm</li>
-</Ul>
-</div>
+      <div class="contenedor">
+        <h2>Nuestros horarios</h2>
+        <Ul>
+          <li>Lunes a Viernes de 8 am a 6 pm</li>
+          <li>Sábados y Domingos de 8 am a 8 pm</li>
+        </Ul>
+      </div>
     </div>
     <br><br><br>
     <div class="Formulario-container">
-<div class="contenedor">
-  <H2 style="text-align: center;">Encuentre nuestra tienda principal aquí</H2>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1964.4945716196285!2d-84.21285746168176!3d10.017754038840705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDAxJzAzLjkiTiA4NMKwMTInNDEuNyJX!5e0!3m2!1ses-419!2scr!4v1721851657354!5m2!1ses-419!2scr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-<div class="contenedor">
-  <H2 style="text-align: center;">Formulario de contacto</H2>
-<form >
-  <ul>
-    <li>
-      <label for="exampleInputPassword1" class="form-label mt-4">Nombre completo</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="" autocomplete="off">
-    </li>
-    <li>
-      <label for="exampleInputEmail1" class="form-label mt-4">Correo electrónico</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ejemplo: Joseperez1002@gmail.com">
-     
-    </li>
-    <li>
-      <label for="exampleInputEmail1" class="form-label mt-4">Fecha de nacimiento</label>
-      <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-     
-    </li>
-    <li>
-      <label for="exampleSelect1" class="form-label mt-4">Genero</label>
-      <select class="form-select" id="exampleSelect1">
-        <option>Hombre</option>
-        <option>Mujer</option>
-        <option>Otros</option>
-       
-      </select>
-    </li>
-    <li>
-      <label for="exampleSelect1" class="form-label mt-4">Razón del contacto</label>
-      <select class="form-select" id="exampleSelect1">
-        <option>Consulta</option>
-        <option>Garantía</option>
-        <option>Sugerencia</option>
-        <option>Otros</option>
-       
-      </select>
-    </li>
-    <li>
-      <label for="exampleSelect1" class="form-label mt-4">Provincia en la que vive</label>
-      <select class="form-select" id="exampleSelect1">
-        <option>Alajuela</option>
-        <option>San José</option>
-        <option>Heredia</option>
-        <option>Puntarenas</option>
-        <option>Limón</option>
-       <option >Guanacaste</option>
-       <option >Cartago</option>
-      </select>
-    </li>
-    <li>
-      <br><br>
-      <h1 style="font-size: 24px;">¿Va a visitar nuestras tiendas físicas si el contacto es para una garantía?</h1>
-      <br>
-      <input  class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-      <label class="form-check-label" for="optionsRadios1">
-        Si
-      </label>
-      <input style="margin-left: 2em;" class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios2" value="option2" checked="">
-      <label class="form-check-label" for="optionsRadios1">
-        No
-      </label>
-    </li>
-  </ul>
-  <div style="margin-left: 2em; margin-top: 3em;">
-    <button type="button" class="btn btn-primary">Enviar</button>
-  </div>
-</form>
-</div>
+      <div class="contenedor">
+        <H2 style="text-align: center;">Encuentre nuestra tienda principal aquí</H2>
+        <div id="mi_mapa" style="width: 100%; height: 500px;"></div>
+        
+
+      </div>
+
+      <div class="contenedor">
+        <H2 style="text-align: center;">Formulario de contacto</H2>
+        <form id="Formulario">
+          <ul>
+            <li>
+              <label for="exampleInputPassword1" class="form-label mt-4">Nombre completo</label>
+              <input type="text" class="form-control" id="Nombre" placeholder="" autocomplete="off">
+              <div id="Advertencia" style="color: red; display: none;">
+                <p>El espacio del nombre está vacío</p>
+              </div>
+            </li>
+            <li>
+              <label for="exampleInputEmail1" class="form-label mt-4">Correo electrónico</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                placeholder="Ejemplo: Joseperez1002@gmail.com">
+
+            </li>
+            <li>
+              <label for="exampleInputEmail1" class="form-label mt-4">Fecha de nacimiento</label>
+              <input type="date" class="form-control" id="Fecha" aria-describedby="emailHelp" placeholder="">
+              <div id="Advertencia2" style="color: red; display: none;">
+                <p>No ha selecionado una fecha fecha</p>
+              </div>
+            </li>
+            <li>
+              <label for="exampleSelect1" class="form-label mt-4">Genero</label>
+              <select class="form-select" id="exampleSelect1">
+                <option>Hombre</option>
+                <option>Mujer</option>
+                <option>Otros</option>
+
+              </select>
+            </li>
+            <li>
+              <label for="exampleSelect1" class="form-label mt-4">Razón del contacto</label>
+              <select class="form-select" id="exampleSelect1">
+                <option>Consulta</option>
+                <option>Garantía</option>
+                <option>Sugerencia</option>
+                <option>Otros</option>
+
+              </select>
+            </li>
+            <li>
+              <label for="exampleSelect1" class="form-label mt-4">Provincia en la que vive</label>
+              <select class="form-select" id="exampleSelect1">
+                <option>Alajuela</option>
+                <option>San José</option>
+                <option>Heredia</option>
+                <option>Puntarenas</option>
+                <option>Limón</option>
+                <option>Guanacaste</option>
+                <option>Cartago</option>
+              </select>
+            </li>
+            <li>
+              <br><br>
+              <h1 style="font-size: 24px;">¿Va a visitar nuestras tiendas físicas si el contacto es para una garantía?
+              </h1>
+              <br>
+              <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios1" value="option1"
+                checked="">
+              <label class="form-check-label" for="optionsRadios1">
+                Si
+              </label>
+              <input style="margin-left: 2em;" class="form-check-input" type="radio" name="optionsRadios"
+                id="optionsRadios2" value="option2" checked="">
+              <label class="form-check-label" for="optionsRadios1">
+                No
+              </label>
+            </li>
+          </ul>
+          <div style="margin-left: 2em; margin-top: 3em;">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+        </form>
+      </div>
     </div>
+    <br><br><br>
+    
   </main>
 
+  <script>
+    let map = L.map('mi_mapa').setView([10.01049, -84.21411], 18)
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker([10.01049, -84.21411]).addTo(map).bindPopup("Oasis VR")
+   
+
+    map.on('click', onMapClick)
+
+    function onMapClick(e) {
+            alert("Posición: " + e.latlng)
+        }
+  </script>
+
+  <script src="./js/Validacioens.js"></script>
 </body>
+
 
 </html>
