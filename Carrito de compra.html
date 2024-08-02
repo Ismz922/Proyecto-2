@@ -67,29 +67,95 @@
   </header>
   <main>
 
-
-    <div class=" d-flex flex-wrap justify-content-center divisionProductos" id="grupoBotones">
-
-      <button type="button" class="btn btn-primary m-2 botonFiltro" filtro="Todos">Todos</button>
-      <button type="button" class="btn btn-secondary m-2 botonFiltro" filtro="Visor">Visores</button>
-      <button type="button" class="btn btn-secondary m-2 botonFiltro"  filtro="Accesorio">Accesorios</button>
-      <button type="button" class="btn btn-secondary m-2 botonFiltro"  filtro="Meta">Meta</button>
-      <button type="button" class="btn btn-secondary m-2 botonFiltro"  filtro="Valve">Valve</button>
-      <button type="button" class="btn btn-secondary m-2 botonFiltro"  filtro="HTC">HTC</button>
+    <body>
+      <div class="container mt-5">
+        <h1 class="mb-4">Carrito de Compras</h1>
+        <div class="row">
+          <div class="col-md-8">
 
 
-    </div>
+            <div class="card mb-3">
+              <div class="row">
+                <div class="col-md-4" >
+                  <img src="./IMG/BaseCarga_img1.jpg"  style="height: auto; width: 100%;">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body ">
+                    <h5 class="card-title">Nombre del producto</h5>
+                    <p class="card-text">Precio: $200</p>
+                    <div class="input-group" style="width: 30%;">
+                      <button class="btn btn-outline-secondary" type="button">-</button>
+                      <input type="text" class="form-control text-center" value="1">
+                      <button class="btn btn-outline-secondary" type="button">+</button>
+                    </div>
+                  </div>
+                  <button class="btn btn-danger btn-sm ms-3 mb-4 " type="button">Eliminar</button>
+                </div>
+              </div>
+            </div>
 
-    <div class="divisionProductos">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 gx-5 gy-4 " id="tienda">
 
+            <div class="card mb-3" >
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="./IMG/metaQuest1_img1.jpg" style="height: auto; width: 100%;">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body ">
+                    <h5 class="card-title">Nombre del producto</h5>
+                    <p class="card-text">Precio: $200</p>
+                    <div class="input-group" style="width: 30%;">
+                      <button class="btn btn-outline-secondary" type="button">-</button>
+                      <input type="text" class="form-control text-center" value="1">
+                      <button class="btn btn-outline-secondary" type="button">+</button>
+                    </div>
+                  </div>
+                  <button class="btn btn-danger btn-sm ms-3 mb-4 " type="button">Eliminar</button>
+
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+
+
+
+           <!-- Inicio de la suma subtotal y total -->
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Resumen de la Compra</h5>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Producto 1
+                    <div>$10</div>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Producto 2
+                    <div>$20</div>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Producto 3
+                    <div>$20</div>
+                  </li>
+                  
+
+
+
+
+                </ul>
+                <h5 class="d-flex justify-content-between">
+                  <div>Total:</div>
+                  <strong>$30</strong>
+                </h5>
+                <button class="btn btn-primary btn-block mt-3">Proceder al Pago</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-
-
-
-
-
+    </body>
 
   </main>
 </body>
