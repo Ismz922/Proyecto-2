@@ -9,6 +9,7 @@
   <script src="./js/bootstrap.min.js"></script>
   <script src="./js/jquery-3.7.1.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./Json/Sucursales.json"></script>
  
   </script>
   <title>Inicio</title>
@@ -59,7 +60,7 @@
       
       <br><br>
       <p class="Animacion">Oasis VR es una empresa comerciante de productos relacionados a la realidad virtulal</p>
-      <p class="Animacion"> que podría decirse que somos el paraiso o mejor dicho el oasis de los elementos para realidad virtulal</p>
+      <p class="Animacion"> que podría decirse que somos el paraiso o mejor dicho el oasis de los elementos para realidad virtual</p>
       <p class="Animacion">y sus accesorios en precios muy competitivos en el mercado de la realidad virtual, con un</p>
       <p class="Animacion">personal altamente capacitado y con los conocimientos necesarios para ayudarle con las</p>
       <p class="Animacion">dudas que posea sobre nuestros productos además de darle la guía y recomendacioes que requiera.</p>
@@ -86,27 +87,27 @@
               <div style="color: black; text-align: center;">
                 <br><br><br>
                 <h5>Lentes de realidad virtual META Quest 2</h5>
-                <p style="margin-right: 2.1em;">¡A tan solo ₡229,000!</p>
+                <p style="margin-right: 2.1em;">¡A tan solo $399,99!</p>
               </div>
             </div>
           </div>
           <div class="carousel-item">
             <img src="https://www.intelec.co.cr/image/cache/catalog/catalogo/Juegos/899-00579-01-800x800w.jpg.webp"
-              class="d-block w-100" alt="...">
+              class="d-block w-100" alt="Imagen de los Meta Quest 3">
             <div class="carousel-caption d-none d-md-block">
               <div style="color: black; text-align: center;">
                 <h5>Lentes de realidad virtual META Quest 3</h5>
-                <p style="margin-right: 2.1em;"> ¡A tan solo ₡368,000!</p>
+                <p style="margin-right: 2.1em;"> ¡A tan solo $499.99!</p>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="https://www.intelec.co.cr/image/cache/catalog/catalogo/MQL83LLA-1-800x800w.jpg.webp"
-              class="d-block w-100" alt="...">
+            <img src="./IMG/Pico4_img2.jpg"
+              class="d-block w-100" alt="Imagen de los Pico 4">
             <div class="carousel-caption d-none d-md-block">
               <div style="color: black; text-align: center;">
-                <h5>Apple Vision Pro</h5>
-                <p style="margin-right: 2.1em;">¡A tan solo ₡2,099,000!</p>
+                <h5>Pico 4</h5>
+                <p style="margin-right: 2.1em;">¡A tan solo $499.99!</p>
               </div>
             </div>
           </div>
@@ -134,21 +135,25 @@
   </main>
   <script>
     
-    let canva = document.getElementById("Grafico").getContext("2d");
+   
+      let canva = document.getElementById("Grafico").getContext("2d");
             var chart = new Chart(canva, {
               type: "bar",
               data: {
-                labels:["Alajuela", "San Jose", "Heredia", "Limon", "Guanacaste", "Puntarenas", "Cartago"],
+                labels:imagen.labels,
                 datasets: [
                   {
                     label: "Sucursales en el país    ",
                     backgroundColor:["#BE0A0A","#9B0ABE","#E6FB14","#19EC0F","#C4981A","#FF9311","#023CF3"],
                     
-                    data:[3,5,2,1,1,2,1]
+                    data:imagen.data
                   }
                 ]
               }
             })
+   
+    
+    
     
   </script>
 </body>
