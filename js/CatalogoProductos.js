@@ -1,3 +1,9 @@
+function DetalleProducto(id) {
+    window.location.href=`Detalle-Producto.html?id=${id}`;
+}
+function Carrito() {
+    window.location.href=`Carrito de compra.html`;
+}
 $(document).ready(function () {
     mostrarProductos(productos)
     
@@ -18,7 +24,7 @@ function mostrarProductos(data){
                     <p class="card-text fs-4 mt-2">$${producto.precio}</p>
                 </div>
                 <div class="card-footer d-flex justify-content-center">
-                    <button type="button" class="btn btn-primary" style="width:80%;">Detalles</button>
+                    <button type="button" class="btn btn-primary" style="width:80%;" onClick="DetalleProducto(${producto.id})">Detalles</button>
                 </div>
             </div>
         </div>`

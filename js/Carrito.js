@@ -6,11 +6,13 @@ function Guardar() {
   const id=producto.id
   const nombre=producto.nombre
   const precio=producto.precio
+  const imagenes=producto.imagenes
 
     const enviar = {
     id,
     nombre,
-    precio
+    precio,
+imagenes
     };
     
     saveContactLocalStorage(enviar);
