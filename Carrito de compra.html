@@ -8,8 +8,9 @@
   <link rel="stylesheet" href="./CSS/Diseño.css">
   <script src="./js/bootstrap.min.js"></script>
   <script src="./js/jquery-3.7.1.js"></script>
+  <script src="./js/Carrito-Carga.js"></script>
   </script>
-  <title>Inicio</title>
+  <title>Carrito de Compras</title>
 </head>
 
 <body>
@@ -31,11 +32,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Home
-                  <span class="visually-hidden">(current)</span>
-                </a>
-              </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="index.html">Inicio</a>
               </li>
@@ -43,19 +40,12 @@
                 <a class="nav-link" href="Preguntas-Frecuentes.html">Preguntas Frecuentes</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="Contactos.html">Contactos</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                  aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Separated link</a>
-                </div>
+              <li class="nav-item">
+                <a class="nav-link" href="Productos.html">Productos</a>
               </li>
+
             </ul>
 
           </div>
@@ -71,62 +61,23 @@
       <div class="container mt-5">
         <h1 class="mb-4">Carrito de Compras</h1>
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-md-8" id="ConteCarrito">
 
 
-            <div class="card mb-3">
-              <div class="row">
-                <div class="col-md-4" >
-                  <img src="./IMG/BaseCarga_img1.jpg"  style="height: auto; width: 100%;">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body ">
-                    <h5 class="card-title">Nombre del producto</h5>
-                    <p class="card-text">Precio: $200</p>
-                    <div class="input-group" style="width: 30%;">
-                      <button class="btn btn-outline-secondary" type="button">-</button>
-                      <input type="text" class="form-control text-center" value="1">
-                      <button class="btn btn-outline-secondary" type="button">+</button>
-                    </div>
-                  </div>
-                  <button class="btn btn-danger btn-sm ms-3 mb-4 " type="button">Eliminar</button>
-                </div>
-              </div>
-            </div>
 
 
-            <div class="card mb-3" >
-              <div class="row">
-                <div class="col-md-4">
-                  <img src="./IMG/metaQuest1_img1.jpg" style="height: auto; width: 100%;">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body ">
-                    <h5 class="card-title">Nombre del producto</h5>
-                    <p class="card-text">Precio: $200</p>
-                    <div class="input-group" style="width: 30%;">
-                      <button class="btn btn-outline-secondary" type="button">-</button>
-                      <input type="text" class="form-control text-center" value="1">
-                      <button class="btn btn-outline-secondary" type="button">+</button>
-                    </div>
-                  </div>
-                  <button class="btn btn-danger btn-sm ms-3 mb-4 " type="button">Eliminar</button>
 
-                </div>
-              </div>
-            </div>
 
-            
           </div>
 
 
 
-           <!-- Inicio de la suma subtotal y total -->
+          <!-- Inicio de la suma subtotal y total -->
           <div class="col-md-4">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Resumen de la Compra</h5>
-                <ul class="list-group list-group-flush mb-3">
+                <ul class="list-group list-group-flush mb-3" id="Factura">
                   <li class="list-group-item d-flex justify-content-between align-items-center">
                     Producto 1
                     <div>$10</div>
@@ -139,7 +90,7 @@
                     Producto 3
                     <div>$20</div>
                   </li>
-                  
+
 
 
 
@@ -147,9 +98,20 @@
                 </ul>
                 <h5 class="d-flex justify-content-between">
                   <div>Total:</div>
-                  <strong>$30</strong>
+                  <strong id="Total">$30</strong>
                 </h5>
-                <button class="btn btn-primary btn-block mt-3">Proceder al Pago</button>
+                <label for="exampleSelect1" class="form-label mt-4">Envío</label>
+                <select class="form-select" id="exampleSelect1">
+                  <option value="Postal">Postal</option>
+                  <option value="Recogida en tienda">Recogida en tienda</option>
+                </select>
+                <br>
+                <label for="exampleInputPassword1" id="Tarjeta" class="form-label mt-4">Tarjeta de
+                  Credito/Debito</label>
+                <input type="text" class="form-control" name="Nombre" placeholder="" autocomplete="off">
+                <img src="" alt="Logo de visa/mastercard" id="Tipo" width="200px" height="150px">
+                <button class="btn btn-primary btn-block mt-3" onclick="ValidarTarjeta()">Validar Tarjeta</button>
+                <button class="btn btn-primary btn-block mt-3" onclick="Facturar()">Proceder al Pago</button>
               </div>
             </div>
           </div>
