@@ -133,31 +133,34 @@ function ValidarTarjeta() {
 
   var numero_tarjeta = document.getElementsByName(`Nombre`)[0]
   numero_tarjeta = numero_tarjeta.value
+  let bin = numero_tarjeta.length >= 8 ? numero_tarjeta.slice(0, 8) : numero_tarjeta.slice(0, 6);
+
  
 
-  var myHeaders = new Headers();
-  myHeaders.append("apikey", "VWATa6QUANUiO0BphzMRDU7oIYPV5AGO");
-
-  var requestOptions = {
-    method: 'GET',
-    redirect: 'follow',
-    headers: myHeaders
-  };
-
   var imagen = document.createElement("img")
-  fetch(`https://api.apilayer.com/bincheck/${numero_tarjeta}`, requestOptions)
-    .then(response => response.json())
-    .then(result => {
-      if (result.scheme == "visa") {
-        var caja = document.getElementById("imagenTarjeta")
-        imagen.src = "https://static.vecteezy.com/system/resources/previews/020/975/576/non_2x/visa-logo-visa-icon-transparent-free-png.png"
-        imagen.style.width = "200px";
-        imagen.style.height = "150px";
-        caja.appendChild(imagen);
-      }
-    })
-    .catch(error => console.log('error', error));
+ const ejecutar=(bi2)=>{
+  fetch(`https://data.handyapi.com/bin/${bi2}`)
+  .then(response => response.json())
+  .then(result => {
+    if (result.Scheme == "VISA") {
+      var caja = document.getElementById("imagenTarjeta")
+      imagen.src = "https://static.vecteezy.com/system/resources/previews/020/975/576/non_2x/visa-logo-visa-icon-transparent-free-png.png"
+      imagen.style.width = "200px";
+      imagen.style.height = "150px";
+      caja.appendChild(imagen);
+    }
+    if (result.Scheme == "MASTERCARD") {
+      var caja = document.getElementById("imagenTarjeta")
+      imagen.src = "https://www.freepnglogos.com/uploads/mastercard-png/mastercard-new-logo-vector-eps-svg-download-3.png"
+      imagen.style.width = "200px";
+      imagen.style.height = "150px";
+      caja.appendChild(imagen);
+    }
+  })
+  .catch(error => console.log('error', error));
 
+ }
+ ejecutar(bin)
 }
 
 function Facturar() {
