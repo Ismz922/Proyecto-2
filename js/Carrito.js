@@ -14,7 +14,11 @@ function Guardar() {
     precio,
 imagenes
     };
-    
+    var texto= document.createElement("b")
+    texto.innerHTML="<br><br> Se a agregado el producto correctamente al carrito "
+    texto.style.color="green"
+    texto.style.fontSize="20px"
+    compraBoton.appendChild(texto)
     saveContactLocalStorage(enviar);
   };
   const saveContactLocalStorage = (enviar) => {
