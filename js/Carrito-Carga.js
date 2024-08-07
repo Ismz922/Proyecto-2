@@ -72,16 +72,16 @@ updateCalculos = (Json) => {
     total += subtotal
   }
   totalElement.innerHTML = ` $${total}`
-var factura={
-subtotales,
-elementos,
-cantidades,
-total
-}
-  
+  var factura = {
+    subtotales,
+    elementos,
+    cantidades,
+    total
+  }
+
   localStorage.removeItem('facturas');
-  
- 
+
+
   localStorage.setItem("facturas", JSON.stringify(factura));
 }
 
@@ -133,36 +133,48 @@ function ValidarTarjeta() {
 
   var numero_tarjeta = document.getElementsByName(`Nombre`)[0]
   numero_tarjeta = numero_tarjeta.value
-  let bin = numero_tarjeta.length >= 8 ? numero_tarjeta.slice(0, 8) : numero_tarjeta.slice(0, 6);
-  var xhr = new XMLHttpRequest();
-  var Url = `https://lookup.binlist.net/${bin}`
-  xhr.open('GET', Url, true);
-  xhr.responseType = 'json'
-  xhr.send();
-  xhr.onload = function () {
-    var respuesta = xhr.response
-    if (respuesta.scheme == 'visa') {
-      document.getElementById(`Tipo`).src = 'https://static.vecteezy.com/system/resources/previews/020/975/576/large_2x/visa-logo-visa-icon-transparent-free-png.png'
-    }
-  }
+ 
+
+  var myHeaders = new Headers();
+  myHeaders.append("apikey", "VWATa6QUANUiO0BphzMRDU7oIYPV5AGO");
+
+  var requestOptions = {
+    method: 'GET',
+    redirect: 'follow',
+    headers: myHeaders
+  };
+
+  var imagen = document.createElement("img")
+  fetch(`https://api.apilayer.com/bincheck/${numero_tarjeta}`, requestOptions)
+    .then(response => response.json())
+    .then(result => {
+      if (result.scheme == "visa") {
+        var caja = document.getElementById("imagenTarjeta")
+        imagen.src = "https://static.vecteezy.com/system/resources/previews/020/975/576/non_2x/visa-logo-visa-icon-transparent-free-png.png"
+        imagen.style.width = "200px";
+        imagen.style.height = "150px";
+        caja.appendChild(imagen);
+      }
+    })
+    .catch(error => console.log('error', error));
 
 }
 
-function Facturar(){
+function Facturar() {
   displayCalculo()
   let facturas = JSON.parse(localStorage.getItem("facturas")) || [];
   var select = document.getElementById("exampleSelect1");
   var indiceSeleccionado = select.selectedIndex;
   var valorSeleccionado = select.options[indiceSeleccionado].value;
   localStorage.removeItem('facturas');
- var nuevo=[]
+  var nuevo = []
   nuevo.push(facturas)
   nuevo.push(valorSeleccionado);
   var numero_tarjeta = document.getElementsByName(`Nombre`)[0].value
   nuevo.push(numero_tarjeta)
 
   localStorage.setItem("facturas", JSON.stringify(nuevo));
-  
-    window.location.href=`Factura.html`;
+
+  window.location.href = `Factura.html`;
 
 }
