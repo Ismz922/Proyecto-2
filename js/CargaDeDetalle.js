@@ -9,8 +9,7 @@ $(document).ready(function () {
       const producto = productos.find((p) => p.id == productoId)
       if (producto) {
         console.log(producto)
-       
-        var estrellas=''
+     var reseña=document.getElementById("Reseña")
         $('#ImagenPrincipal').attr('src',producto.imagenes[0])
         $('#Imagen1').attr('src',producto.imagenes[1])
         $('#Imagen2').attr('src',producto.imagenes[2])
@@ -23,15 +22,20 @@ $(document).ready(function () {
         $('#PrecioEnvio').append('Ya esta incluido')
         $('#TiempoEntrega').append('3-5 días hábiles')
         $('#Garantia').append(producto.garantia)
-        for (let index = 0; index < producto.resena_usuarios; index++) {
-          estrellas=estrellas+'★'
-          
+      for (let index = 0; index < producto.reseñas.length; index++) {
+        var caja=document.createElement("div")
+        caja.innerHTML=''
+        var estrellas=''
+        for (let j = 0; j < producto.reseñas[index].estrellas; j++) {
+         estrellas=estrellas+"★"          
         }
-        $('#Reseña').append(estrellas);
+        caja.innerHTML=`<b>${producto.reseñas[index].usuario}:</b>  ${estrellas}
+         <br>
+        ${producto.reseñas[index].texto}  <br><br>`
+        reseña.appendChild(caja);
+      }
+       
       }
     }
   });
-  
-  
-  
   
