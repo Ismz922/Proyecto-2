@@ -4,14 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Detalle de producto</title>
   <link rel="stylesheet" href="./CSS/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="./CSS/Diseño.css">
+  <link rel="stylesheet" href="./CSS/Formulario.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
   <script src="./js/bootstrap.min.js"></script>
   <script src="./js/jquery-3.7.1.js"></script>
-
-
-  <link rel="stylesheet" href="./CSS/Formulario.css">
+  <title>Contactos</title>
 </head>
 
 <body>
@@ -22,17 +24,16 @@
     <div>
 
 
-
+      
       <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Oasis vr</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
-            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav me-auto">
-
+             
               <li class="nav-item">
                 <a class="nav-link" href="index.html">Inicio</a>
               </li>
@@ -44,9 +45,9 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Productos.html">Productos</a>
-              </li>
+              </li>                      
             </ul>
-
+            
           </div>
         </div>
       </nav>
@@ -55,69 +56,135 @@
     </div>
   </header>
   <main>
-    <div class="Formulario-container" style="margin-top: 2em; margin-bottom: 2em; ">
-
-      <div class="contenedor2">
-        <img id="ImagenPrincipal" src="" alt="" width="400px" height="350px">
-        <br><br>
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img id="Imagen1" src="..." class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img id="Imagen2" src="..." class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img id="Imagen3" src="..." class="d-block w-100" alt="...">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
+    <br><br><br>
+    <h2 style="font-size: 80px; text-align: center;">Contactenos</h2>
+    <br><br>
+    <div class="Formulario2-container">
+      <div class="contenedor">
+        <H2>Teléfono:</H2>
+        <p style="margin-left: -0.5em;">3422-2332</p>
       </div>
-      <div class="contenedor2" style="background-color: white;" id="Agregar">
-        <div style="margin-left: -2em; text-align: left; margin-top: 6em;">
-          <b id="Nombre" style="font-size: 20px; margin-top: 0.5em; margin-bottom: 0.5em; margin-left: 2em;"></b>
-          <p id="Precio" style="font-size: 20px; "></p>
-          <p id="Stock" style="font-size: 20px; margin-top: 0.5em; margin-bottom: 0.5em;"><b>Stock: </b></p>
-          <p id="Descripcion" style="font-size: 20px; margin-top: 0.5em; margin-bottom: 0.5em;"><b>Descripcion: </b></p>
-          <p id="TipoEntrega" style="font-size: 20px; margin-top: 0.5em; margin-bottom: 0.5em;"></p>
-          <p id="PrecioEnvio" style="font-size: 20px; margin-top: 0.5em; margin-bottom: 0.5em;"><b>Precio de envio: </b>
-          </p>
-          <p id="TiempoEntrega" style="font-size: 20px; margin-top: 0.5em; margin-bottom: 0.5em;"><b>Tiempo de entrega
-              aproximada: </b></p>
-          <p id="Garantia" style="font-size: 20px; margin-top: 0.5em; margin-bottom: 0.5em;"><b>Garantía: </b></p>
-          <div id="Reseña"
-            style="font-size: 20px; margin-top: 0.5em; margin-bottom: 0.5em; margin-left: 2em; text-align: left;">
-            <b>Reseñas:</b>
-          </div>
-          <br><br><br>
-          <button class="btn btn-primary" type="submit" style="width: 60%; margin-left: 7em;" onclick="Guardar()">Añadir
-            al carrito</button>
-
-        </div>
+      <div class="contenedor">
+        <h2>Correo electrónico</h2>
+        <p>OasisCR@gmail.com</p>
+      </div>
+      <div class="contenedor">
+        <h2>Nuestros horarios</h2>
+        <Ul>
+          <li>Lunes a Viernes de 8 am a 6 pm</li>
+          <li>Sábados y Domingos de 8 am a 8 pm</li>
+        </Ul>
       </div>
     </div>
-    <div class="contenedor">
-      <h2>Enlaces de su interés</h2>
-      <a href="Contactos.html" target="_blank">Contactos</a>
-      <br>
-      <a href="Devolucuion.html" target="_blank">Política de devoluciones y cambios de la empresa</a>
+    <br><br><br>
+    <div class="Formulario-container">
+      <div class="contenedor">
+        <H2 style="text-align: center;">Encuentre nuestra tienda principal aquí</H2>
+        <div id="mi_mapa" style="width: 100%; height: 500px;"></div>
+        
+
+      </div>
+
+      <div class="contenedor">
+        <H2 style="text-align: center;">Formulario de contacto</H2>
+        <form id="Formulario">
+          <ul>
+            <li>
+              <label for="exampleInputPassword1" class="form-label mt-4">Nombre completo</label>
+              <input type="text" class="form-control" id="Nombre" placeholder="" autocomplete="off">
+              <div id="Advertencia" style="color: red; display: none;">
+                <p>El espacio del nombre está vacío</p>
+              </div>
+            </li>
+            <li>
+              <label for="exampleInputEmail1" class="form-label mt-4">Correo electrónico</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                placeholder="Ejemplo: Joseperez1002@gmail.com">
+
+            </li>
+            <li>
+              <label for="exampleInputEmail1" class="form-label mt-4">Fecha de nacimiento</label>
+              <input type="date" class="form-control" id="Fecha" aria-describedby="emailHelp" placeholder="">
+              <div id="Advertencia2" style="color: red; display: none;">
+                <p>No ha selecionado una fecha fecha</p>
+              </div>
+            </li>
+            <li>
+              <label for="exampleSelect1" class="form-label mt-4">Genero</label>
+              <select class="form-select" id="exampleSelect1">
+                <option>Hombre</option>
+                <option>Mujer</option>
+                <option>Otros</option>
+
+              </select>
+            </li>
+            <li>
+              <label for="exampleSelect1" class="form-label mt-4">Razón del contacto</label>
+              <select class="form-select" id="exampleSelect1">
+                <option>Consulta</option>
+                <option>Garantía</option>
+                <option>Sugerencia</option>
+                <option>Otros</option>
+
+              </select>
+            </li>
+            <li>
+              <label for="exampleSelect1" class="form-label mt-4">Provincia en la que vive</label>
+              <select class="form-select" id="exampleSelect1">
+                <option>Alajuela</option>
+                <option>San José</option>
+                <option>Heredia</option>
+                <option>Puntarenas</option>
+                <option>Limón</option>
+                <option>Guanacaste</option>
+                <option>Cartago</option>
+              </select>
+            </li>
+            <li>
+              <br><br>
+              <h1 style="font-size: 24px;">¿Va a visitar nuestras tiendas físicas si el contacto es para una garantía?
+              </h1>
+              <br>
+              <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios1" value="option1"
+                checked="">
+              <label class="form-check-label" for="optionsRadios1">
+                Si
+              </label>
+              <input style="margin-left: 2em;" class="form-check-input" type="radio" name="optionsRadios"
+                id="optionsRadios2" value="option2" checked="">
+              <label class="form-check-label" for="optionsRadios1">
+                No
+              </label>
+            </li>
+          </ul>
+          <div style="margin-left: 2em; margin-top: 3em;">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+        </form>
+      </div>
     </div>
+    <br><br><br>
+    
   </main>
-  <script src="./js/CargaDeDetalle.js"></script>
-  <script src="./Json/Productos.js"></script>
-  <script src="./js/notify.min.js"></script>
-  <script src="./js/Carrito.js"></script>
+
+  <script>
+    let map = L.map('mi_mapa').setView([10.01049, -84.21411], 18)
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker([10.01049, -84.21411]).addTo(map).bindPopup("Oasis VR")
+   
+
+    map.on('click', onMapClick)
+
+    function onMapClick(e) {
+            alert("Posición: " + e.latlng)
+        }
+  </script>
+
+  <script src="./js/Validacioens.js"></script>
 </body>
 <div class="container">
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -139,5 +206,6 @@
     </ul>
   </footer>
 </div>
+
 
 </html>
