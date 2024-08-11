@@ -1,20 +1,33 @@
 function Carga() {
     let facturas = JSON.parse(localStorage.getItem("facturas")) || [];
-    var texto= document.getElementById('Dinero')
+    var texto = document.getElementById('Dinero')
+    var total=document.getElementById('Total')
     for (let index = 0; index < facturas[0].subtotales.length; index++) {
-        var parrafo = document.createElement("div")
-        parrafo.innerHTML = `<p><b style="font-size:22px ;">${facturas[0].elementos[index]}:</b><br> ${facturas[0].cantidades[index]} <br> $${facturas[0].subtotales[index]}
-        <br>------------------------------------------</p> `
+        var parrafo = document.createElement("tr")
+        parrafo.innerHTML = `<tr>
+         <td>
+              <p>${facturas[0].elementos[index]}</p>
+            </td>
+            <td > 
+              <p class="Titulos2">${facturas[0].cantidades[index]}</p>
+            </td>
+            <td>
+              <p  style="margin-left: 10em;">$${facturas[0].subtotales[index]}</p>
+            </td>
+            </tr> `
+texto.appendChild(parrafo)
 
-texto.appendChild(parrafo);
     }
-    var sub=document.createElement("div")
-    sub.innerHTML=`<p>Total: $${facturas[0].total} <br><br>  </p>`
-     var info=document.createElement("div")
-    info.innerHTML=`<p>Tipo de envío: ${facturas[1]} <br> Numero de tarjeta: ${facturas[2]}</p>`
-    texto.appendChild(sub)
-    texto.appendChild(info)
+    var totalColocar=document.createElement('h2')
+    var totalColocar2=document.createElement('h2')
+    var totalColocar3=document.createElement('h2')
+    totalColocar.innerHTML=`Total: $${facturas[0].total}`
+    total.appendChild(totalColocar)
+    totalColocar3.innerHTML=`Envío: ${facturas[1]}`
+    total.appendChild(totalColocar3)
+    totalColocar2.innerHTML=`Tarjeta: ${facturas[2]}`
+    total.appendChild(totalColocar2)
 }
 document.addEventListener('DOMContentLoaded', function () {
     Carga();
-  });
+});
