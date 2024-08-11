@@ -69,7 +69,13 @@
 
 
           </div>
-
+          <dialog id="Modal" style="width: 50%;">
+            <h2>¡Advertencia!</h2>
+            <p> Está a punto de eliminar este producto <br>
+              ¿Desea continuar?</p>
+              <button class="btn btn-primary btn-block mt-3" id="10000" name="Si" onclick="deleteRow(this)">Si</button>
+              <button class="btn btn-primary btn-block mt-3" onclick="cerrar()">No</button>
+          </dialog>
 
 
           <!-- Inicio de la suma subtotal y total -->
@@ -110,7 +116,7 @@
                   Credito/Debito</label>
                 <input type="text" class="form-control" name="Nombre" placeholder="" autocomplete="off">
                 <div id="imagenTarjeta">
-<p><br><br></p>
+                  <p><br><br></p>
                 </div>
                 <button class="btn btn-primary btn-block mt-3" onclick="ValidarTarjeta()">Validar Tarjeta</button>
                 <button class="btn btn-primary btn-block mt-3" onclick="Facturar()">Proceder al Pago</button>
@@ -120,7 +126,9 @@
         </div>
       </div>
     </body>
+    <div id="Ventana">
 
+    </div>
   </main>
 </body>
 <script src="js/CatalogoProductos.js"></script>
