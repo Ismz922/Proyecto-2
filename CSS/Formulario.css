@@ -21,6 +21,17 @@
     margin-left: 2em;
     margin-right: 2em;
 }
+.contenedor2 {
+  background-color: rgba(232, 225, 204, 0.5);
+ 
+  padding: 3rem;
+  border-radius: 5px;
+ text-align: left;
+  
+  text-align: center;
+  margin-left: 2em;
+  margin-right: 2em;
+}
 li{
   list-style: none;
 }
