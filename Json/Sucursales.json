@@ -1,5 +1,5 @@
  var imagen={
-    "labels": ["Alajuela", "San Jose", "Heredia", "Limon", "Guanacaste", "Puntarenas", "Cartago"],
+    "labels": ["Alajuela", "San José", "Heredia", "Limón", "Guanacaste", "Puntarenas", "Cartago"],
     "data":[3,5,2,1,1,2,1]
 
 }
