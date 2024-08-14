@@ -147,7 +147,7 @@ function Menos(numero) {
   cantidad--;
   if (cantidad < 1) {
     
-    abrirVentana(enviar)
+    abrirVentana(enviar,numero)
     
 
   }
@@ -155,16 +155,24 @@ function Menos(numero) {
   document.getElementsByName(`Campo[${numero}]`).innerHTML = valor
   EjecutarCalculo()
 }
-function abrirVentana(numero){
+function abrirVentana(enviar,numero){
   const modal=document.querySelector('#Modal')
   document.getElementsByName('Si')[0].id=10000
-document.getElementById('10000').id=numero
+  document.getElementsByName('No')[0].id=20000
+document.getElementById('10000').id=enviar
+document.getElementById('20000').id=numero
   modal.showModal();
 }
 
 function cerrar() {
   const modal=document.querySelector('#Modal')
+  var numero= document.getElementsByName('No')[0].id
+  var valor = document.getElementsByName(`Campo[${numero}]`)[0]
+   valor.value=1
+  document.getElementsByName(`Campo[${numero}]`).innerHTML = valor
+  
   modal.close();
+  EjecutarCalculo()
 }
 function ValidarTarjeta() {
 
