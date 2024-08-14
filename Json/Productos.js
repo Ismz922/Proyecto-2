@@ -237,7 +237,7 @@ const productos = [
         "precio": 79.99,
         "stock": "Tienda física",
         "descripcion": "Mandos adicionales para Meta Quest, diseñados para ofrecer un control preciso y una interacción intuitiva en la realidad virtual.",
-        "imagenes": ["./IMG/MandosQuest2_img1.jpg","./IMG/MandosQuest2_img2.jpg","./IMG/MandosQuest2_img3.jpg","./IMG/MandosQuest2_img4.jpg"],
+        "imagenes": ["https://lookaside.fbsbx.com/elementpath/media/?media_id=5780385225373918&version=1711615157&transcode_extension=webp","./IMG/MandosQuest2_img2.jpg","./IMG/MandosQuest2_img3.jpg","./IMG/MandosQuest2_img4.jpg"],
         "categorias": ["Meta", "Accesorio"],
         "tiempos_entrega_envio": "3-5 días hábiles, gastos de envío incluidos",
         "opciones_entrega": "Entrega a domicilio",
