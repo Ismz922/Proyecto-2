@@ -189,18 +189,19 @@ var boton = document.getElementById('Concretar')
       .then(result => {
         if (result.Scheme == "VISA") {
           var caja = document.getElementById("imagenTarjeta")
-          imagen.src = "https://static.vecteezy.com/system/resources/previews/020/975/576/non_2x/visa-logo-visa-icon-transparent-free-png.png"
-          imagen.style.width = "200px";
-          imagen.style.height = "150px";
-          caja.appendChild(imagen);
+          
+          caja.innerHTML=''
+           caja.innerHTML=`
+           <p><br><br></p>
+                  <img src="https://static.vecteezy.com/system/resources/previews/020/975/576/non_2x/visa-logo-visa-icon-transparent-free-png.png" alt="Tarjeta de crédito/débito" width = "200px"; height = "150px";>`
           boton.disabled =false
         }else{
           if (result.Scheme == "MASTERCARD") {
             var caja = document.getElementById("imagenTarjeta")
-            imagen.src = "https://www.freepnglogos.com/uploads/mastercard-png/mastercard-new-logo-vector-eps-svg-download-3.png"
-            imagen.style.width = "200px";
-            imagen.style.height = "150px";
-            caja.appendChild(imagen);
+         caja.innerHTML=''
+           caja.innerHTML=`
+           <p><br><br></p>
+                  <img src=" https://www.freepnglogos.com/uploads/mastercard-png/mastercard-new-logo-vector-eps-svg-download-3.png" alt="Tarjeta de crédito/débito" width = "200px"; height = "150px";>`
             boton.disabled =false
           }else{
             boton.disabled =true
