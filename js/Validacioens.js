@@ -1,14 +1,14 @@
 document.getElementById('Formulario').addEventListener('submit', function(event) {
     event.preventDefault();
-    document.getElementById('Advertencia').style.display="none"
-    document.getElementById('Advertencia2').style.display="none"
+   
     const textInput = document.getElementById('Nombre');
    
     
     const textValue = textInput.value.trim(); 
     
     if (textValue === '') {
-       document.getElementById('Advertencia').style.display="block"
+     
+       $.notify("El espacio del nombre está vacío", "warn");
     } 
     const dateInput = document.getElementById('Fecha');
    
@@ -16,7 +16,8 @@ document.getElementById('Formulario').addEventListener('submit', function(event)
     const dateValue = dateInput.value;
     
     if (dateValue === '') {
-         document.getElementById('Advertencia2').style.display="block"
+        
+        $.notify("No ha selecionado una fecha valida", "warn");
     } 
         
 });
