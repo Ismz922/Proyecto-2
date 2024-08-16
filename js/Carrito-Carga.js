@@ -180,7 +180,7 @@ function ValidarTarjeta() {
   numero_tarjeta = numero_tarjeta.value
   let bin = numero_tarjeta.length >= 8 ? numero_tarjeta.slice(0, 8) : numero_tarjeta.slice(0, 6);
 
-
+var boton = document.getElementById('Concretar')
 
   var imagen = document.createElement("img")
   const ejecutar = (bi2) => {
@@ -193,14 +193,20 @@ function ValidarTarjeta() {
           imagen.style.width = "200px";
           imagen.style.height = "150px";
           caja.appendChild(imagen);
+          boton.disabled =false
+        }else{
+          if (result.Scheme == "MASTERCARD") {
+            var caja = document.getElementById("imagenTarjeta")
+            imagen.src = "https://www.freepnglogos.com/uploads/mastercard-png/mastercard-new-logo-vector-eps-svg-download-3.png"
+            imagen.style.width = "200px";
+            imagen.style.height = "150px";
+            caja.appendChild(imagen);
+            boton.disabled =false
+          }else{
+            boton.disabled =true
+          }
         }
-        if (result.Scheme == "MASTERCARD") {
-          var caja = document.getElementById("imagenTarjeta")
-          imagen.src = "https://www.freepnglogos.com/uploads/mastercard-png/mastercard-new-logo-vector-eps-svg-download-3.png"
-          imagen.style.width = "200px";
-          imagen.style.height = "150px";
-          caja.appendChild(imagen);
-        }
+      
       })
       .catch(error => console.log('error', error));
 
