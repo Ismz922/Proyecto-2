@@ -47,7 +47,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Acerca-De.html">Acerca de</a>
-            </li>
+              </li>
             </ul>
 
           </div>
@@ -58,69 +58,98 @@
     </div>
   </header>
   <main>
-    <div class="Formulario-container" style="margin-top: 2em; margin-bottom: 2em; ">
 
-      <div class="contenedor2">
-        <img id="ImagenPrincipal" src="" alt="" width="400px" height="350px">
-        <br><br>
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img id="Imagen1" src="..." class="d-block w-100" alt="...">
+    <div class="container-fluid my-5">
+      <div class="row justify-content-center my-4">
+        <div class="col-md-4 col-12 my-2 mx-2">
+          <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel"
+            style="max-width: 100%; max-height: 100%; height: 100%;">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img id="Imagen1" src="..." class="d-block w-100" alt="..." style="object-fit: cover; min-width: 100%;">
+              </div>
+              <div class="carousel-item">
+                <img id="Imagen2" src="..." class="d-block w-100" alt="..." style="object-fit: cover; min-width: 100%;">
+              </div>
+              <div class="carousel-item">
+                <img id="Imagen3" src="..." class="d-block w-100" alt="..." style="object-fit: cover; min-width: 100%;">
+              </div>
+              <div class="carousel-item">
+                <img id="Imagen4" src="..." class="d-block w-100" alt="..." style="object-fit: cover; min-width: 100%;">
+              </div>
             </div>
-            <div class="carousel-item">
-              <img id="Imagen2" src="..." class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img id="Imagen3" src="..." class="d-block w-100" alt="...">
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
-      </div>
-      <div class="contenedor2" style="background-color: white;" id="Agregar">
-        <div style="margin-left: -2em; text-align: left; margin-top: 6em;">
-          <b id="Nombre" style="font-size: 20px; margin-top: 0.5em; margin-bottom: 0.5em; margin-left: 2em;"></b>
-          <p id="Precio" style="font-size: 20px; "></p>
-          <p id="Stock" style="font-size: 20px; margin-top: 0.5em; margin-bottom: 0.5em;"><b>Stock: </b></p>
-          <p id="Descripcion" style="font-size: 20px; margin-top: 0.5em; margin-bottom: 0.5em;"><b>Descripción: </b></p>
-          <p id="TipoEntrega" style="font-size: 20px; margin-top: 0.5em; margin-bottom: 0.5em;"></p>
-          <p id="PrecioEnvio" style="font-size: 20px; margin-top: 0.5em; margin-bottom: 0.5em;"><b>Precio de envío: </b>
-          </p>
-          <p id="TiempoEntrega" style="font-size: 20px; margin-top: 0.5em; margin-bottom: 0.5em;"><b>Tiempo de entrega
-              aproximada: </b></p>
-          <p id="Garantia" style="font-size: 20px; margin-top: 0.5em; margin-bottom: 0.5em;"><b>Garantía: </b></p>
-          <div id="Reseña"
-            style="font-size: 20px; margin-top: 0.5em; margin-bottom: 0.5em; margin-left: 2em; text-align: left;">
-            <b>Reseñas:</b>
+        <div class="col-lg-4 col-md-7 col-sm-12 my-2">
+          <div class="p-4" style="background-color: #fff; border-radius: 12px; border: 1px solid #e0e0e0;" id="Agregar">
+            <h2 id="Nombre" class="text-center mb-3" style="font-size: 24px;"></h2>
+            <p id="Precio" class="text-primary text-center mb-3" style="font-size: 22px; font-weight: bold;"></p>
+            <button class="btn btn-primary w-100 mb-3" type="submit" onclick="Guardar()">Añadir al carrito</button>
+            <div class="mb-3">
+              <p id="Stock" style="font-size: 18px;"><b>Stock:</b> <em class="value"></em></p>
+            </div>
+            <div class="mb-3">
+              <p id="Descripcion" style="font-size: 18px;"><b>Descripción:</b> <em class="value"></em></p>
+            </div>
+            <div class="mb-3">
+              <p id="TipoEntrega" style="font-size: 18px;"><b>Tipo de envío:</b> <em class="value"></em></p>
+            </div>
+            <div class="mb-3">
+              <p id="PrecioEnvio" style="font-size: 18px;"><b>Precio de envío:</b> <em class="value"></em></p>
+            </div>
+            <div class="mb-3">
+              <p id="TiempoEntrega" style="font-size: 18px;"><b>Tiempo de entrega aproximada:</b> <em
+                  class="value"></em></p>
+            </div>
+            <div class="mb-3">
+              <p id="Garantia" style="font-size: 18px;"><b>Garantía:</b> <em class="value"></em></p>
+            </div>
+            <div id="Reseña" class="mb-4" style="font-size: 18px;">
+              <b>Reseñas:</b>
+              <div class="reseñas-content mt-2" style="max-height: 200px; overflow-y: auto;"></div>
+            </div>
+
           </div>
-          <br><br><br>
-          <button class="btn btn-primary" type="submit" style="width: 60%; margin-left: 7em;" onclick="Guardar()">Añadir
-            al carrito</button>
+
 
         </div>
       </div>
     </div>
-    <div class="contenedor">
-      <h2>Enlaces de su interés</h2>
-      <a href="Contactos.html" target="_blank">Contactos</a>
-      <br>
-      <a href="Devolucion.html" target="_blank">Política de devoluciones y cambios de la empresa</a>
+
+
+
+
+    <div class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <div class="p-4 rounded" style="background-color: rgba(232, 225, 204, 0.8);">
+            <h2>Enlaces de su interés</h2>
+            <a href="Contactos.html" target="_blank">Contactos</a>
+            <br>
+            <a href="Devolucion.html" target="_blank">Política de devoluciones y cambios de la empresa</a>
+          </div>
+        </div>
+      </div>
     </div>
+
+
+
+
   </main>
-  <script src="./js/CargaDeDetalle.js"></script>
+ 
   <script src="./Json/Productos.js"></script>
-  <script src="./js/notify.min.js"></script>
   <script src="./js/Carrito.js"></script>
+  <script src="./js/CargaDeDetalle.js"></script>
 </body>
 <div class="container">
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">

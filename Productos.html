@@ -45,8 +45,8 @@
                 <a class="nav-link" href="Productos.html">Productos</a>
               </li>
               <li class="nav-item">
-                                <a class="nav-link" href="Acerca-De.html">Acerca de</a>
-                            </li>
+                <a class="nav-link" href="Acerca-De.html">Acerca de</a>
+              </li>
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                   <a class="nav-link" onclick="Carrito()" href="#">
@@ -74,16 +74,41 @@
       <button type="button" class="btn btn-secondary m-2 botonFiltro" filtro="Meta">Meta</button>
       <button type="button" class="btn btn-secondary m-2 botonFiltro" filtro="Valve">Valve</button>
       <button type="button" class="btn btn-secondary m-2 botonFiltro" filtro="HTC">HTC</button>
-      
+
 
 
     </div>
 
-    <div class="divisionProductos">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 gx-5 gy-4 " id="tienda">
+
+    <div class="container my-5">
+      <div class="row  my-4 " id="tienda">
+
 
       </div>
     </div>
+
+
+
+
+
+
+    <!-- <div class="divisionProductos">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 gx-5 gy-4 " id="tienda">
+        <div class="col">
+          <div class="card h-100">
+            <img class="card-img-top" src="${producto.imagenes[0]}" alt="${producto.imagenes[0]}">
+            <div class="card-body ">
+              <h5 class="card-title ">${producto.nombre}</h5>
+              <p class="card-text fs-4 mt-2">$${producto.precio}</p>
+            </div>
+            <div class="card-footer d-flex justify-content-center">
+              <button type="button" class="btn btn-primary" style="width:80%;"
+                onClick="DetalleProducto(${producto.id})">Detalles</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
 
 
 
