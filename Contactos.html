@@ -111,9 +111,7 @@
                 <li>
                   <label for="exampleInputPassword1" class="form-label mt-4">Nombre completo</label>
                   <input type="text" class="form-control" id="Nombre" placeholder="" autocomplete="off">
-                  <div id="Advertencia" style="color: red; display: none;">
-                    <p>El espacio del nombre está vacío</p>
-                  </div>
+                 
                 </li>
                 <li>
                   <label for="exampleInputEmail1" class="form-label mt-4">Correo electrónico</label>
@@ -124,9 +122,7 @@
                 <li>
                   <label for="exampleInputEmail1" class="form-label mt-4">Fecha de nacimiento</label>
                   <input type="date" class="form-control" id="Fecha" aria-describedby="emailHelp" placeholder="">
-                  <div id="Advertencia2" style="color: red; display: none;">
-                    <p>No ha selecionado una fecha fecha</p>
-                  </div>
+                 
                 </li>
                 <li>
                   <label for="exampleSelect1" class="form-label mt-4">Genero</label>
@@ -190,7 +186,8 @@
     </div>
 
   </main>
-
+<script src="./js/notify.min.js"></script>
+  <script src="./js/Validacioens.js"></script>
   <script>
     let map = L.map('mi_mapa').setView([10.01049, -84.21411], 18)
 
@@ -201,7 +198,6 @@
     L.marker([10.01049, -84.21411]).addTo(map).bindPopup("Oasis VR")
 
 
-    map.on('click', onMapClick)
 
     function onMapClick(e) {
       alert("Posición: " + e.latlng)
