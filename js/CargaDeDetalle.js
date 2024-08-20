@@ -18,8 +18,8 @@ $(document).ready(function () {
         $('#Precio').html('<b>Precio: </b>$'+producto.precio)
         $('#Stock').append(producto.stock)
         $('#Descripcion').append(producto.descripcion)     
-        $('#TipoEntrega').html('<b>Tipo de envio: </b>'+producto.opciones_entrega)
-        $('#PrecioEnvio').append('Ya esta incluido')
+       $('#TipoEntrega').html('<b>Tipo de envío: </b>'+producto.opciones_entrega)
+        $('#PrecioEnvio').append('Ya está incluido')
         $('#TiempoEntrega').append('3-5 días hábiles')
         $('#Garantia').append(producto.garantia)
       for (let index = 0; index < producto.reseñas.length; index++) {
