@@ -65,34 +65,25 @@
   </header>
   <main>
 
-    <div class="focalizar"  style="width: 60%; background-color: white; box-shadow: 3px 3px 3px 3px;">
+    <div class="container" style="background-color: white; box-shadow: 3px 3px 3px 3px;">
       <h1>Su factura</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>
-              <h2>
-                Producto
-              </h2>
-            </th>
-            <th>
-              <h2 class="Titulos">Cantidad</h2>
-            </th>
-            <th>
-              <h2 class="Titulos">Subtotal</h2>
-            </th>
-          </tr>
-        </thead>
-        <tbody style="font-size: 20px; margin-top: 2em; margin-bottom: 2em;" id="Dinero">
-
-        </tbody>
-      
-      </table>
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              <th>Subtotal</th>
+            </tr>
+          </thead>
+          <tbody id="Dinero" style="font-size: 20px; margin-top: 2em; margin-bottom: 2em;">
+          </tbody>
+        </table>
+      </div>
       <div id="Total">
-<p><br></p>
+        <p><br></p>
       </div>
     </div>
-
   </main>
 </body>
 
