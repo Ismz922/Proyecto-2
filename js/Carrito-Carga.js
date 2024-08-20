@@ -64,12 +64,16 @@ updateCalculos = (Json) => {
     campo.className = "list-group-item d-flex justify-content-between align-items-center"
     var valor = document.getElementsByName(`Campo[${index}]`)[0]
     var subtotal = valor.value * Json[index].precio
+    subtotal=parseFloat(subtotal.toFixed(2));
     subtotales.push(subtotal)
     elementos.push(`${Json[index].nombre}`)
     cantidades.push(`${valor.value}`)
+    
     campo.innerHTML = `<p>${Json[index].nombre}:    ${subtotal}  <br> Cantidad: ${valor.value}</p>`
     lista.appendChild(campo);
+    
     total += subtotal
+    total=parseFloat(total.toFixed(2));
   }
   totalElement.innerHTML = ` $${total}`
   var factura = {
@@ -233,3 +237,4 @@ function Facturar() {
   window.location.href = `Factura.html`;
 
 }
+
